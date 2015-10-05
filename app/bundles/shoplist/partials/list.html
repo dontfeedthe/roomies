@@ -1,0 +1,23 @@
+<div class="row">
+	<div class="col-md-12">
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Price</th>
+					<th>Buyer</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="item in ctrl.list">
+					<td>{{item.title}}</td>
+					<td>{{item.price}}</td>
+					<td>{{item.buyer}}</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<button ng-click="ctrl.addNewItem()" class="btn btn-default">New ITEM</button>
+	</div>
+</div>
