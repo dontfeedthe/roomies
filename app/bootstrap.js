@@ -1,4 +1,4 @@
 /* global angular */
-import { default as RoomiesModules} from './app/app.module.js'
+import { default as RoomiesMain} from './app/app.main'
 
-angular.bootstrap(document, [RoomiesModules])
+angular.bootstrap(document, [RoomiesMain])
