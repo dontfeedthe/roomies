@@ -1,0 +1,25 @@
+{
+  "name": "roomies",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "protractor ./app/protractor.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dontfeedthe/roomies.git"
+  },
+  "keywords": [
+    "Roomies",
+    "flatsharing",
+    "grocery",
+    "list"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dontfeedthe/roomies/issues"
+  },
+  "homepage": "https://github.com/dontfeedthe/roomies#readme"
+}
