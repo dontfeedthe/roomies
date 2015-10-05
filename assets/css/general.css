@@ -1,0 +1,19 @@
+body {
+	background-color: #eeeeee;
+}
+
+
+/****************************************
+* TO BE MOVED IN A SEPARATE FILE
+* Migrate to SCSS ?
+*****************************************/
+
+.stats {
+	color: white;
+	background-color: #474f70;
+	border-radius: 4px;
+}
+
+.stats > .balance-header {
+	padding-top: 10px;
+}
