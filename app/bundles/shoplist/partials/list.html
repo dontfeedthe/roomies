@@ -1,5 +1,23 @@
+<!-- <div class="row">
+	<div class="col-md-4 stats">
+		<div class="balance-header">
+			<div class="row">
+				<div class="col-md-6">
+					Balance
+				</div>
+				<div class="col-md-6">
+					Icon
+				</div>
+			</div>
+		</div>
+	</div>
+</div> -->
+
 <div class="row">
 	<div class="col-md-12">
+
+		Total : {{ctrl.getTotal()}}<br />
+		Sorted : {{ctrl.getTotalByRoommate()}}<br />
 
 		<table class="table">
 			<thead>
@@ -10,7 +28,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="item in ctrl.list">
+				<tr ng-repeat="item in ctrl.list" ng-class="{success: item.bought}">
 					<td>{{item.title}}</td>
 					<td>{{item.price}}</td>
 					<td>{{item.buyer}}</td>
@@ -18,6 +36,37 @@
 			</tbody>
 		</table>
 		
-		<button ng-click="ctrl.addNewItem()" class="btn btn-default">New ITEM</button>
+		<form novalidate class="simple-form">
+			<div class="form-group">
+				<label for="title">Title: </label>
+    			<input type="text" ng-model="item.title" id="title" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<label for="price">Price: </label>
+    			<input type="number" ng-model="item.price" id="price" class="form-control"  />
+			</div>
+
+			<div class="form-group">
+				<label for="buyer">Buyer: </label>
+				<input type=text list="browsers" ng-model="item.buyer" id="buyer" class="form-control" >
+				<datalist id="browsers" >
+				   <option>Adrien</option>
+				   <option>Simon</option>
+				   <option>Julien</option>
+				</datalist>
+			</div>
+
+			<div class="checkbox">
+				<label for="bought">
+					<input type="checkbox" ng-model="item.bought" id="title" class="checkbox" /> Bought?
+				</label>
+    			
+			</div>
+
+			<button ng-click="ctrl.addNewItem(item)" class="btn btn-default">New ITEM</button>
+		</form>
+
+		
 	</div>
 </div>
