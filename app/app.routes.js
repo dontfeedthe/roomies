@@ -1,17 +1,16 @@
+'use strict'
+import BundleRoutes from './bundles/bundles.routes'
+
 function init ($stateProvider, $urlRouterProvider) {
+  // Default route
+  $urlRouterProvider.otherwise('/home')
 
-	// Default route
-	$urlRouterProvider.otherwise("/shoplist");
-
-	$stateProvider
-		.state('shoplist', {
-			url: "/shoplist",
-			templateUrl: "app/bundles/shoplist/partials/list.html",
-			controller:'Roomies.shopListController',
-			controllerAs:'ctrl'
-		})
+  for (var i = 0; i < BundleRoutes.length; i++) {
+    $stateProvider
+      .state(BundleRoutes[i].state, BundleRoutes[i].options)
+  }
 }
 
 init.$inject = ['$stateProvider', '$urlRouterProvider']
 
-export default init;
+export default init
