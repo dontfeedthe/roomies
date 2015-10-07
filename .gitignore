@@ -1,0 +1,13 @@
+# MacOS files
+.DS_Store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directory
+node_modules
+
+# Bower dependencies
+bower_components
