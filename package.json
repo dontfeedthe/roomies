@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "protractor ./app/protractor.conf.js"
+    "e2e": "protractor ./app/protractor.conf.js",
+    "unit": "mocha --compilers js:mocha-traceur ./app/**/*.unit.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,12 @@
   "bugs": {
     "url": "https://github.com/dontfeedthe/roomies/issues"
   },
-  "homepage": "https://github.com/dontfeedthe/roomies#readme"
+  "homepage": "https://github.com/dontfeedthe/roomies#readme",
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "expect.js": "^0.3.1",
+    "mocha": "^2.3.3",
+    "mocha-traceur": "^2.1.0",
+    "protractor": "^2.4.0"
+  }
 }
