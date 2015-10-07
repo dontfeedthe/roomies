@@ -1,8 +1,6 @@
-class SharedFlatService {
+import SharedFlat from '../models/SharedFlat'
 
-  constructor () {
-    this._name = ''
-  }
+class SharedFlatService {
 
   get roommates () {
     return {
@@ -26,7 +24,11 @@ class SharedFlatService {
       if (id == null) {
         reject(Error('You must provide an ID as parameter'))
       } else {
-        reject(Error('This SharedFlat doesn\'t exists'))
+        if (id === 1) {
+          resolve(new SharedFlat(1, 'Appartement de l\'amour', '89, boulevard Murat', {}))
+        } else {
+          reject(Error('This SharedFlat doesn\'t exists'))
+        }
       }
     })
   }

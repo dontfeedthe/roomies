@@ -30,5 +30,20 @@ describe('SharedFlatService', () => {
         expect(error.message).to.be("This SharedFlat doesn't exists")
       })
     })
+
+    it('return a SharedFlat if it exists', () => {
+      return service.findById(1).then((result) => {
+        expect(result.id).to.not.be(undefined)
+        expect(result.id).to.be(1)
+        expect(result.name).to.not.be(undefined)
+        expect(result.name).to.be.a('string')
+        expect(result.address).to.not.be(undefined)
+        expect(result.address).to.be.a('string')
+        expect(result.roomies).to.not.be(undefined)
+        expect(result.roomies).to.be.a('object')
+      }, () => {
+        expect().fail('findById might have return a result')
+      })
+    })
   })
 })
