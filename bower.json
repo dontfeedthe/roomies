@@ -20,6 +20,7 @@
     "angular-ui-router": "~0.2.15",
     "angular": "1.4.7",
     "traceur": "~0.0.91",
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3.5",
+    "components-font-awesome": "~4.4.0"
   }
 }

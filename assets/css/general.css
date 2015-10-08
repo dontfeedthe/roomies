@@ -1,6 +1,68 @@
 body {
-	background-color: #eeeeee;
+	background-color: #f3f5f9;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #717171;
 }
+
+.header-bar {
+    background-color: #4b4276;
+}
+
+.header-bar .btn {
+    position: absolute;
+    font-size: 1.3em;
+    line-height: 30px;
+    padding: 9px 12px;
+    color: white;
+}
+
+.header-bar .btn.chat {
+    top: 0;
+    right: 0;
+}
+
+.header-brand {
+    font-weight: 100;
+    display: block;
+    height: 50px;
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.panel {
+    border-color: #ebeff6;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+
+.panel .panel-body,
+.panel .panel-footer {
+    border-color: #ebeff6;
+}
+
+.panel .panel-footer {
+    font-size: 12px;
+
+}
+
+.view-wrapper {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    margin-top: 20px;
+
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.view-wrapper.nav-displayed {
+    left: 250px;
+}
+
 
 
 /****************************************
