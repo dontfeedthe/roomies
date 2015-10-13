@@ -1,4 +1,4 @@
-import SharedFlat from '../models/SharedFlat'
+import SharedFlat from '../models/SharedFlat.model'
 
 class SharedFlatService {
 

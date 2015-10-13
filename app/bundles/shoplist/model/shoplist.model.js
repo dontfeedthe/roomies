@@ -6,7 +6,7 @@ class Shoplist {
     this._id = id
     this._name = name
     this._description = description
-    this._items = items
+    this._items = (items !== undefined) ? items : []
     this._sharedFlatID = sharedFlatID
   }
 
@@ -40,6 +40,10 @@ class Shoplist {
 
   set items (items) {
     this._items = items
+  }
+
+  addItem (item) {
+    this._items.push(item)
   }
 
   get sharedFlatID () {

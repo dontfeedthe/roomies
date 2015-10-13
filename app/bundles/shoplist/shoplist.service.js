@@ -1,17 +1,27 @@
 'use strict'
-import SharedFlat from '../../shared/models/SharedFlat.model'
-import Item from './model/item.model'
 import Shoplist from './model/shoplist.model'
 
 class ShoplistService {
 
-  findById () {}
+  findById (id) {
+    return new Promise((resolve, reject) => {
+      if (id === 1) {
+        resolve(new Shoplist(1, 'First list'))
+      } else {
+        reject(new Error('This list (' + id + ') doesn\'t exist'))
+      }
+    })
+  }
 
   findAllBySharedflat (sharedFlat) {}
 
   save (shoplist) {}
 
   delete (shoplist) {}
+
+  static shoplistFactory () {
+    return new ShoplistService()
+  }
 }
 
 export default ShoplistService
