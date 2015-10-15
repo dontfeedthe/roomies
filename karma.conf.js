@@ -2,7 +2,8 @@
 // Generated on Tue Oct 13 2015 18:27:56 GMT+0200 (CEST)
 
 module.exports = function(config) {
-  config.set({
+    'use strict';
+    config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
@@ -10,7 +11,8 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['browserify', 'mocha'],
+    frameworks: ['mocha'],
+    plugins: [require('karma-babel-preprocessor'), require('karma-coverage'), 'karma-mocha', require('karma-phantomjs-launcher')],
 
 
     // list of files / patterns to load in the browser
@@ -29,14 +31,21 @@ module.exports = function(config) {
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
+
     preprocessors: {
-        'app/*.js': ['browserify'],
-        'app/**/*.js': ['browserify']
+        'app/**/*.js': ['babel', 'coverage']
     },
 
-    browserify: {
-        debug: true,
-        transform: ['babelify', 'stringify']
+    coverageReporter: {
+        reporters: [
+            {
+                type: 'text-summary',
+            },
+            {
+                type: 'html',
+                dir: 'coverage/',
+            }
+        ]
     },
 
 
@@ -70,6 +79,6 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false
-  })
+    singleRun: true
+    })
 }

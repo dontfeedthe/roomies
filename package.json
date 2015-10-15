@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "e2e": "protractor ./app/protractor.conf.js",
-    "unit": "mocha --compilers js:mocha-traceur ./app/**/*.unit.js"
+    "unit": "./node_modules/.bin/mocha --compilers js:mocha-traceur ./app/**/*.unit.js",
+    "coverage": "istanbul cover mocha -- --compilers js:mocha-traceur ./app/**/*.unit.js",
+    "test": "npm run unit"
   },
   "repository": {
     "type": "git",
@@ -24,9 +26,13 @@
   },
   "homepage": "https://github.com/dontfeedthe/roomies#readme",
   "devDependencies": {
+    "babel": "^5.8.23",
     "chai": "^3.3.0",
     "expect.js": "^0.3.1",
+    "istanbul": "^0.3.22",
+    "karma-babel-preprocessor": "^5.2.2",
     "karma-browserify": "^4.4.0",
+    "karma-coverage": "^0.5.2",
     "mocha": "^2.3.3",
     "mocha-traceur": "^2.1.0",
     "protractor": "^2.4.0"
