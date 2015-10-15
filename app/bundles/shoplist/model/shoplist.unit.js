@@ -1,7 +1,7 @@
 'use strict'
 /* global describe, it */
 import expect from 'expect.js'
-import Shoplist from './Shoplist.model'
+import Shoplist from './shoplist.model'
 import Item from './item.model'
 
 describe('Shoplist', () => {
