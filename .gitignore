@@ -11,3 +11,6 @@ node_modules
 
 # Bower dependencies
 bower_components
+
+# Built
+assets/css
