@@ -1,7 +1,140 @@
 body {
-	background-color: #eeeeee;
+	background-color: #f3f5f9;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #717171;
 }
 
+html, body {
+	height: 100%;
+}
+
+#wrapper {
+	min-height: 100%;
+}
+
+.header-bar {
+    background-color: #4b4276;
+}
+
+.header-bar .btn {
+    position: absolute;
+    font-size: 1.3em;
+    line-height: 30px;
+    padding: 9px 12px;
+    color: white;
+}
+
+.header-bar .btn.chat {
+    top: 0;
+    right: 0;
+}
+
+.header-brand {
+    font-weight: 100;
+    display: block;
+    height: 50px;
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.panel {
+    border-color: #ebeff6;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+
+.panel .panel-body,
+.panel .panel-footer {
+    border-color: #ebeff6;
+}
+
+.panel .panel-footer .row.sondage {
+	text-align: center;
+}
+
+.panel .panel-footer {
+    font-size: 12px;
+
+}
+
+.panel .panel-body.photos {
+	padding: 0;
+}
+
+.panel .panel-body.create-news,
+.panel .panel-footer.create-news {
+  padding: 0;
+}
+
+.panel .panel-body.create-news input {
+	width: 100%;
+	border: 0;
+	padding: 15px;
+	outline: none;
+}
+
+.comment-news {
+		padding: 0;
+}
+
+.comment-news input {
+	background-color: #f5f5f5;
+	width: 100%;
+	padding: 10px;
+	outline: none;
+	border: 0;
+}
+
+.panel .panel-body.photos img{
+	width: 100%;
+}
+
+.view-wrapper {
+    position: absolute;
+    width: 100%;
+    left: 0;
+
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.view-wrapper.nav-displayed {
+    left: 250px;
+}
+
+.navbar.bottom {
+	/*background-color: #546E74;*/
+	background-color: #E74C3C;
+	color: white;
+}
+
+.navbar.bottom .col-xs-6 {
+	text-align: center;
+	font-size: 25px;
+	padding-top: 5px;
+}
+
+.navbar-default .navbar-brand {
+	/*color: #E74C3C;*/
+}
+
+.app-wrapper {
+	margin-top: 60px;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.logo {
+	/*background-color: #E74C3C;*/
+}
 
 /****************************************
 * TO BE MOVED IN A SEPARATE FILE
