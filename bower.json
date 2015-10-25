@@ -21,6 +21,7 @@
     "angular": "1.4.7",
     "traceur": "~0.0.91",
     "bootstrap": "~3.3.5",
-    "components-font-awesome": "~4.4.0"
+    "components-font-awesome": "~4.4.0",
+    "angular-openlayers-directive": "~1.2.2"
   }
 }

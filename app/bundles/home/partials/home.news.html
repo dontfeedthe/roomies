@@ -1,0 +1,82 @@
+<div class="row">
+    <div class="col-md-12 col-xs-12">
+        <div class="panel">
+            <div class="panel-body create-news">
+              <form ng-submit="ctrl.createNews(status)">
+                <input type="text" value="" ng-model="status" placeholder="What's up?" />
+              </form>
+            </div>
+            <footer class="panel-footer">
+              <div class="row">
+                <div class="col-xs-1">
+                  <i class="fa fa-camera"></i>
+                </div>
+                <div class="col-xs-1">
+                  <i class="fa fa-calendar-check-o"></i>
+                </div>
+              </div>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12 col-xs-12">
+        <div class="panel">
+            <div class="panel-body">
+              What about the idea of making a warm-up party on the <a href="#">6th of November</a> ?
+            </div>
+            <footer class="panel-footer">
+              <div class="row sondage">
+                <div class="col-xs-4" ui-sref="events.view">I am in!</div>
+                <div class="col-xs-4" ui-sref="events.view">No</div>
+                <div class="col-xs-4" ui-sref="events.view">As you want</div>
+              </div>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="row">
+    <div class="col-md-12 col-xs-12">
+        <div class="panel">
+            <div class="panel-body photos">
+                <img src="assets/dev-images/soiree-mousse.png" />
+            </div>
+            <footer class="panel-footer">
+                Write a comment...
+            </footer>
+        </div>
+    </div>
+</div> -->
+
+<div class="row" ng-repeat="new in ctrl.news">
+    <div class="col-md-12 col-xs-12">
+        <div class="panel">
+            <div class="panel-body">
+                {{ new.message }}
+            </div>
+            <footer class="panel-footer comment-news">
+                <input type="text" value="" ng-model="status" placeholder="Write a comment..." />
+            </footer>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="row">
+    <div class="col-md-12 col-xs-12">
+        <div class="panel">
+            <div class="panel-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+            <footer class="panel-footer">
+                Write a comment...
+            </footer>
+        </div>
+    </div>
+</div> -->
