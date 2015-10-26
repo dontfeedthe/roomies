@@ -28,6 +28,10 @@
     "expect.js": "^0.3.1",
     "mocha": "^2.3.3",
     "mocha-traceur": "^2.1.0",
-    "protractor": "^2.4.0"
+    "protractor": "^2.4.0",
+    "sinon-es6": "0.0.3"
+  },
+  "dependencies": {
+    "moment": "^2.10.6"
   }
 }
