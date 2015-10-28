@@ -34,8 +34,15 @@ describe('TaskService', () => {
 
     describe('and that is non-recurrent', () => {
       it('should return task status `done, a few seconds ago` if it has been done', () => {
+        sinon.stub(service, "findById", () => {
+          return new Promise(function(resolve, reject) {
+            resolve(new Task(1, 'Buy new loudspeakers', new Moment().format(), true, null))
+          });
+        })
+
         return service.getStatusById(1).then((result) => {
           expect(result).to.be.equal('done, a few seconds ago')
+          service.findById.restore()
         }, (error) => {
           expect().fail();
         })
@@ -69,6 +76,12 @@ describe('TaskService', () => {
         }, (error) => {
           expect().fail();
         })
+      })
+    })
+
+    describe('and that is recurrent', () => {
+      it('should return task status `late` if it not done but the due date is passed', () => {
+
       })
     })
   })

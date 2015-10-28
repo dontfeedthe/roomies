@@ -2,11 +2,12 @@
 
 class Task {
 
-  constructor (id, name, dueDate, status, recurringTask, interval) {
+  constructor (id, name, dueDate, done, recurringTask, interval) {
     this._id = id;
     this._name = name;
     this._dueDate = dueDate;
-    this._status = status;
+    this._dueDate = dueDate;
+    this._done = done;
     this._recurringTask = recurringTask;
     this._interval = interval;
   }
@@ -38,12 +39,12 @@ class Task {
     return this;
   }
 
-  get status () {
-    return this._status
+  get done () {
+    return this._done
   }
 
-  set status (status) {
-    this._status
+  set done (done) {
+    this._done
     return this;
   }
 
