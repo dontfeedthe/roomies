@@ -1,11 +1,12 @@
+/* global FB */
 class FacebookFactory {
   login () {
     return new Promise((resolve, reject) => {
       FB.login((response) => {
-        if(response.authResponse) {
-          resolve()
+        if (response.authResponse) {
+          resolve('fb_connexion_successfull')
         } else {
-          reject()
+          reject('fb_connexion_failed')
         }
       })
     })
@@ -13,8 +14,8 @@ class FacebookFactory {
 
   getUserInformations () {
     return new Promise((resolve, reject) => {
-      FB.api('/me', (response) => {
-        if(response) {
+      FB.api('/me', {fields: 'gender,first_name,last_name,locale,email'}, (response) => {
+        if (response) {
           resolve(response)
         } else {
           reject('Unable to collect user informations')
@@ -26,7 +27,7 @@ class FacebookFactory {
   getProfilePicture () {
     return new Promise((resolve, reject) => {
       FB.api('/me/picture', (response) => {
-        if(response) {
+        if (response) {
           resolve(response)
         } else {
           reject('Unable to collect user informations')
@@ -35,9 +36,23 @@ class FacebookFactory {
     })
   }
 
-  static sharedFacebookFactory(){
-  	return new FacebookFactory();
-	}
+  getLoginStatus () {
+    return new Promise((resolve, reject) => {
+      FB.getLoginStatus((response) => {
+        if (response.status === 'connected') {
+          resolve('The user is connected to FB')
+        } else if (response.status === 'not_authorized') {
+          reject(new Error('The user is logged in to Facebook but the application is not authorized'))
+        } else {
+          reject(new Error('The user is not logged in'))
+        }
+      })
+    })
+  }
+
+  static sharedFacebookFactory () {
+    return new FacebookFactory()
+  }
 }
 
 export default FacebookFactory
