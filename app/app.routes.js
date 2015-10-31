@@ -3,7 +3,7 @@ import BundleRoutes from './bundles/bundles.routes'
 
 function init ($stateProvider, $urlRouterProvider) {
   // Default route
-  $urlRouterProvider.otherwise('/login')
+  $urlRouterProvider.otherwise('/')
 
   for (var i = 0; i < BundleRoutes.length; i++) {
     $stateProvider
