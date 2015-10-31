@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "e2e": "protractor ./app/protractor.conf.js",
-    "unit": "mocha --compilers js:mocha-traceur ./app/**/*.unit.js"
+    "unit": "mocha --compilers js:mocha-traceur ./app/**/*.unit.js",
+    "test": "npm run unit"
   },
   "repository": {
     "type": "git",
