@@ -8,6 +8,15 @@ export default [{
   }
 },
 {
+  state: 'default',
+  options: {
+    url: '/',
+    templateUrl: 'app/bundles/home/partials/login.html',
+    controller: 'Roomies.HomeController',
+    controllerAs: 'ctrl'
+  }
+},
+{
   state: 'home.news',
   options: {
     url: '/news',
@@ -22,20 +31,6 @@ export default [{
     views: {
       'content': { templateUrl: 'app/bundles/home/partials/home.list.html' }
     }
-  }
-}, {
-  state: 'login',
-  options: {
-    url: '/login',
-    templateUrl: 'app/bundles/home/partials/login.html',
-    controller: 'Roomies.HomeController',
-    controllerAs: 'ctrl'
-  }
-},
-{
-  state: 'login.facebook',
-  options: {
-    url: '/facebook'
   }
 },
 {
