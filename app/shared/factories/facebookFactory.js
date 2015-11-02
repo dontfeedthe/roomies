@@ -12,6 +12,10 @@ class FacebookFactory {
     })
   }
 
+  loginWithoutDialog (clientID, redirectURL) {
+    return 'https://www.facebook.com/dialog/oauth?client_id=' + clientID + '&redirect_uri=' + redirectURL
+  }
+
   getUserInformations () {
     return new Promise((resolve, reject) => {
       FB.api('/me', {fields: 'gender,first_name,last_name,locale,email'}, (response) => {
