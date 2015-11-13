@@ -1,5 +1,6 @@
 # MacOS files
 .DS_Store
+.sass-cache
 
 # Logs
 logs
@@ -11,3 +12,5 @@ node_modules
 
 # Bower dependencies
 bower_components
+
+build

@@ -26,6 +26,10 @@
   "devDependencies": {
     "chai": "^3.3.0",
     "expect.js": "^0.3.1",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-ruby-sass": "^2.0.5",
+    "gulp-sourcemaps": "^1.6.0",
     "mocha": "^2.3.3",
     "mocha-traceur": "^2.1.0",
     "protractor": "^2.4.0"

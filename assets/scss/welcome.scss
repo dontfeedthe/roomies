@@ -1,0 +1,44 @@
+/*546E7A
+E74C3C*/
+
+.welcome {
+    background-color: #E74C3C;
+    color: white;
+    font-size: 16px;
+    padding-top: 20px;
+
+    p {
+        padding-bottom: 30px;
+    }
+}
+
+.informations {
+  padding: 20px 0;
+
+  input {
+    padding: 20px;
+    border-radius: 0;
+    border: 1px solid;
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+
+    &:focus {
+      box-shadow: none;
+      border-color: #E74C3C;
+    }
+  }
+
+  span {
+    &.info {
+      font-weight: 200;
+    }
+  }
+}
+
+.validate-data {
+  padding: 10px;
+  text-align: center;
+  background-color: #E74C3C;
+  color: white;
+}
