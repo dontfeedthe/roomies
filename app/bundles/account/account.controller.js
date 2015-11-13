@@ -19,7 +19,7 @@ class AccountController {
         $state.go('default')
       })
     }, () => {
-      $window.location.href = this.Facebook.loginWithoutDialog('637744676328877', 'http://localhost/roomies/#/login/facebook')
+      $window.location.href = this.Facebook.loginWithoutDialog('637744676328877', encodeURI('http://localhost/roomies/#/login/facebook'))
     //   this.Facebook.login().then(() => {
     //     this.Facebook.getUserInformations().then((userInfo) => {
     //       this._user = userInfo
